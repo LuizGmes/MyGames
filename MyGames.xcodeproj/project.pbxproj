@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		680B70C324C34847005E295D /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680B70C224C34847005E295D /* OnboardingView.swift */; };
+		680B70C524C348EF005E295D /* OnboardingCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 680B70C424C348EF005E295D /* OnboardingCollectionViewCell.xib */; };
+		680B70C724C34A2A005E295D /* OnboardingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680B70C624C34A2A005E295D /* OnboardingCollectionViewCell.swift */; };
+		680B70C924C34D6F005E295D /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680B70C824C34D6F005E295D /* OnboardingViewController.swift */; };
+		680B70CE24C36ED4005E295D /* Authentication.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 680B70CD24C36ED4005E295D /* Authentication.storyboard */; };
+		680B70D024C37896005E295D /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680B70CF24C37896005E295D /* SignInViewController.swift */; };
+		680B70D224C37DAC005E295D /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680B70D124C37DAC005E295D /* ResetPasswordViewController.swift */; };
+		680B70D424C3860F005E295D /* AuthenticationContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680B70D324C3860F005E295D /* AuthenticationContainerViewController.swift */; };
+		680B70D624C38998005E295D /* SignInLandscape.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 680B70D524C38998005E295D /* SignInLandscape.storyboard */; };
 		6850612B248EA23D00AC9D96 /* ConsoleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6850612A248EA23D00AC9D96 /* ConsoleViewController.swift */; };
 		6850612F248EC21300AC9D96 /* AddEditConsoleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6850612E248EC21300AC9D96 /* AddEditConsoleViewController.swift */; };
 		68506131248EC4B700AC9D96 /* ConsoleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68506130248EC4B700AC9D96 /* ConsoleTableViewCell.swift */; };
@@ -26,6 +35,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		680B70C224C34847005E295D /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		680B70C424C348EF005E295D /* OnboardingCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnboardingCollectionViewCell.xib; sourceTree = "<group>"; };
+		680B70C624C34A2A005E295D /* OnboardingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCollectionViewCell.swift; sourceTree = "<group>"; };
+		680B70C824C34D6F005E295D /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		680B70CD24C36ED4005E295D /* Authentication.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Authentication.storyboard; sourceTree = "<group>"; };
+		680B70CF24C37896005E295D /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		680B70D124C37DAC005E295D /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
+		680B70D324C3860F005E295D /* AuthenticationContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationContainerViewController.swift; sourceTree = "<group>"; };
+		680B70D524C38998005E295D /* SignInLandscape.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignInLandscape.storyboard; sourceTree = "<group>"; };
 		6850612A248EA23D00AC9D96 /* ConsoleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsoleViewController.swift; sourceTree = "<group>"; };
 		6850612E248EC21300AC9D96 /* AddEditConsoleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEditConsoleViewController.swift; sourceTree = "<group>"; };
 		68506130248EC4B700AC9D96 /* ConsoleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsoleTableViewCell.swift; sourceTree = "<group>"; };
@@ -57,6 +75,70 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		680B70BE24C34726005E295D /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				680B70CA24C364C5005E295D /* Authentication */,
+				680B70BF24C34735005E295D /* Onboarding */,
+			);
+			name = Features;
+			sourceTree = "<group>";
+		};
+		680B70BF24C34735005E295D /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				680B70C124C3475A005E295D /* Controllers */,
+				680B70C024C3474F005E295D /* Views */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		680B70C024C3474F005E295D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				680B70C224C34847005E295D /* OnboardingView.swift */,
+				680B70C624C34A2A005E295D /* OnboardingCollectionViewCell.swift */,
+				680B70C424C348EF005E295D /* OnboardingCollectionViewCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		680B70C124C3475A005E295D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				680B70C824C34D6F005E295D /* OnboardingViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		680B70CA24C364C5005E295D /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				680B70CC24C364EE005E295D /* Views */,
+				680B70CB24C364E3005E295D /* Controllers */,
+			);
+			name = Authentication;
+			sourceTree = "<group>";
+		};
+		680B70CB24C364E3005E295D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				680B70CF24C37896005E295D /* SignInViewController.swift */,
+				680B70D124C37DAC005E295D /* ResetPasswordViewController.swift */,
+				680B70D324C3860F005E295D /* AuthenticationContainerViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		680B70CC24C364EE005E295D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				680B70CD24C36ED4005E295D /* Authentication.storyboard */,
+				680B70D524C38998005E295D /* SignInLandscape.storyboard */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		68506128248EA0B900AC9D96 /* DataBase */ = {
 			isa = PBXGroup;
 			children = (
@@ -93,6 +175,7 @@
 		ED8AA203246F559500287D33 /* MyGames */ = {
 			isa = PBXGroup;
 			children = (
+				680B70BE24C34726005E295D /* Features */,
 				ED8AA204246F559500287D33 /* AppDelegate.swift */,
 				ED8AA206246F559500287D33 /* SceneDelegate.swift */,
 				68506129248EA0FF00AC9D96 /* StoryBoard */,
@@ -174,6 +257,9 @@
 				ED8AA214246F559700287D33 /* LaunchScreen.storyboard in Resources */,
 				ED8AA211246F559700287D33 /* Assets.xcassets in Resources */,
 				ED8AA20C246F559500287D33 /* Main.storyboard in Resources */,
+				680B70C524C348EF005E295D /* OnboardingCollectionViewCell.xib in Resources */,
+				680B70D624C38998005E295D /* SignInLandscape.storyboard in Resources */,
+				680B70CE24C36ED4005E295D /* Authentication.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -186,17 +272,23 @@
 			files = (
 				ED8AA220247018BF00287D33 /* GameViewController.swift in Sources */,
 				68506131248EC4B700AC9D96 /* ConsoleTableViewCell.swift in Sources */,
+				680B70C724C34A2A005E295D /* OnboardingCollectionViewCell.swift in Sources */,
 				ED8AA2222470192000287D33 /* AddEditViewController.swift in Sources */,
 				6850612B248EA23D00AC9D96 /* ConsoleViewController.swift in Sources */,
 				ED8AA205246F559500287D33 /* AppDelegate.swift in Sources */,
 				ED8AA22624701E9600287D33 /* ConsolesTableViewController.swift in Sources */,
+				680B70D024C37896005E295D /* SignInViewController.swift in Sources */,
 				ED8AA207246F559500287D33 /* SceneDelegate.swift in Sources */,
+				680B70D224C37DAC005E295D /* ResetPasswordViewController.swift in Sources */,
+				680B70D424C3860F005E295D /* AuthenticationContainerViewController.swift in Sources */,
 				6850612F248EC21300AC9D96 /* AddEditConsoleViewController.swift in Sources */,
 				ED8AA22A2470581C00287D33 /* ConsolesManager.swift in Sources */,
 				ED8AA21C2470176B00287D33 /* GamesTableViewController.swift in Sources */,
+				680B70C924C34D6F005E295D /* OnboardingViewController.swift in Sources */,
 				ED8AA20F246F559500287D33 /* MyGames.xcdatamodeld in Sources */,
 				ED8AA22824702C6400287D33 /* ViewController+CoreData.swift in Sources */,
 				ED8AA22424701B9C00287D33 /* GameTableViewCell.swift in Sources */,
+				680B70C324C34847005E295D /* OnboardingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
