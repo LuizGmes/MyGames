@@ -148,6 +148,9 @@ class AddEditViewController: UIViewController {
         } catch {
             print(error.localizedDescription)
         }
+        
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "updateList"), object: nil)
+        
         // Back na navigation
         navigationController?.popViewController(animated: true)
     }

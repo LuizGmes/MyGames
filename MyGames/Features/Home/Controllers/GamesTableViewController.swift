@@ -42,6 +42,17 @@ class GamesTableViewController: UITableViewController {
         searchController.searchResultsUpdater = self
         
         loadGames()
+        
+        NotificationCenter
+        .default
+        .addObserver(self,
+                     selector: #selector(refreshTable),
+                     name: NSNotification.Name(rawValue: "updateList"),
+                     object: nil)
+    }
+    
+    @objc func refreshTable(notification: NSNotification) {
+        self.tableView.reloadData()
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -65,7 +76,9 @@ class GamesTableViewController: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         // se ocorrer mudancas na entidade Console, a atualização automatica não irá ocorrer porque nosso NSFetchResultsController esta monitorando a entidade Game. Caso tiver mudanças na entidade Console precisamos atualizar a tela com a tabela de alguma forma: reloadData :)
-        tableView.reloadData()
+       // tableView.reloadData()
+       // navigationController?.navigationBar.prefersLargeTitles = true
+
     }
     
     
