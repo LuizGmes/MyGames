@@ -16,6 +16,8 @@
 		680B70D224C37DAC005E295D /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680B70D124C37DAC005E295D /* ResetPasswordViewController.swift */; };
 		680B70D424C3860F005E295D /* AuthenticationContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680B70D324C3860F005E295D /* AuthenticationContainerViewController.swift */; };
 		680B70D624C38998005E295D /* SignInLandscape.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 680B70D524C38998005E295D /* SignInLandscape.storyboard */; };
+		680B70F524C3AFEE005E295D /* Game.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 680B70F424C3AFEE005E295D /* Game.storyboard */; };
+		680B70F724C3BEA2005E295D /* GameCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680B70F624C3BEA2005E295D /* GameCollectionViewController.swift */; };
 		6850612B248EA23D00AC9D96 /* ConsoleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6850612A248EA23D00AC9D96 /* ConsoleViewController.swift */; };
 		6850612F248EC21300AC9D96 /* AddEditConsoleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6850612E248EC21300AC9D96 /* AddEditConsoleViewController.swift */; };
 		68506131248EC4B700AC9D96 /* ConsoleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68506130248EC4B700AC9D96 /* ConsoleTableViewCell.swift */; };
@@ -44,6 +46,8 @@
 		680B70D124C37DAC005E295D /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
 		680B70D324C3860F005E295D /* AuthenticationContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationContainerViewController.swift; sourceTree = "<group>"; };
 		680B70D524C38998005E295D /* SignInLandscape.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignInLandscape.storyboard; sourceTree = "<group>"; };
+		680B70F424C3AFEE005E295D /* Game.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Game.storyboard; sourceTree = "<group>"; };
+		680B70F624C3BEA2005E295D /* GameCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCollectionViewController.swift; sourceTree = "<group>"; };
 		6850612A248EA23D00AC9D96 /* ConsoleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsoleViewController.swift; sourceTree = "<group>"; };
 		6850612E248EC21300AC9D96 /* AddEditConsoleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEditConsoleViewController.swift; sourceTree = "<group>"; };
 		68506130248EC4B700AC9D96 /* ConsoleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsoleTableViewCell.swift; sourceTree = "<group>"; };
@@ -75,25 +79,56 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		680B70BE24C34726005E295D /* Features */ = {
+		680B70E524C39A9B005E295D /* Features */ = {
 			isa = PBXGroup;
 			children = (
-				680B70CA24C364C5005E295D /* Authentication */,
-				680B70BF24C34735005E295D /* Onboarding */,
+				680B70F124C3AF73005E295D /* Game */,
+				680B70E924C39B30005E295D /* Onboarding */,
+				680B70E624C39AAA005E295D /* Authentication */,
+				680B70EC24C39C6A005E295D /* Home */,
+				68506128248EA0B900AC9D96 /* DataBase */,
 			);
-			name = Features;
+			path = Features;
 			sourceTree = "<group>";
 		};
-		680B70BF24C34735005E295D /* Onboarding */ = {
+		680B70E624C39AAA005E295D /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
-				680B70C124C3475A005E295D /* Controllers */,
-				680B70C024C3474F005E295D /* Views */,
+				680B70E824C39AD9005E295D /* Controllers */,
+				680B70E724C39ACD005E295D /* Views */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		680B70E724C39ACD005E295D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				680B70CD24C36ED4005E295D /* Authentication.storyboard */,
+				680B70D524C38998005E295D /* SignInLandscape.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		680B70E824C39AD9005E295D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				680B70D324C3860F005E295D /* AuthenticationContainerViewController.swift */,
+				680B70D124C37DAC005E295D /* ResetPasswordViewController.swift */,
+				680B70CF24C37896005E295D /* SignInViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		680B70E924C39B30005E295D /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				680B70EB24C39B4C005E295D /* Controllers */,
+				680B70EA24C39B40005E295D /* Views */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
 		};
-		680B70C024C3474F005E295D /* Views */ = {
+		680B70EA24C39B40005E295D /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				680B70C224C34847005E295D /* OnboardingView.swift */,
@@ -103,40 +138,72 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		680B70C124C3475A005E295D /* Controllers */ = {
+		680B70EB24C39B4C005E295D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				680B70C824C34D6F005E295D /* OnboardingViewController.swift */,
 			);
-			name = Controllers;
+			path = Controllers;
 			sourceTree = "<group>";
 		};
-		680B70CA24C364C5005E295D /* Authentication */ = {
+		680B70EC24C39C6A005E295D /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				680B70CC24C364EE005E295D /* Views */,
-				680B70CB24C364E3005E295D /* Controllers */,
+				680B70EE24C39C7C005E295D /* Controllers */,
+				680B70ED24C39C72005E295D /* Views */,
 			);
-			name = Authentication;
+			path = Home;
 			sourceTree = "<group>";
 		};
-		680B70CB24C364E3005E295D /* Controllers */ = {
+		680B70ED24C39C72005E295D /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				680B70CF24C37896005E295D /* SignInViewController.swift */,
-				680B70D124C37DAC005E295D /* ResetPasswordViewController.swift */,
-				680B70D324C3860F005E295D /* AuthenticationContainerViewController.swift */,
+				ED8AA212246F559700287D33 /* LaunchScreen.storyboard */,
+				ED8AA20A246F559500287D33 /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		680B70EE24C39C7C005E295D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				ED8AA22524701E9600287D33 /* ConsolesTableViewController.swift */,
+				ED8AA21B2470176B00287D33 /* GamesTableViewController.swift */,
+				ED8AA21F247018BF00287D33 /* GameViewController.swift */,
+				ED8AA2212470192000287D33 /* AddEditViewController.swift */,
+				ED8AA22324701B9C00287D33 /* GameTableViewCell.swift */,
+				ED8AA22724702C6400287D33 /* ViewController+CoreData.swift */,
+				ED8AA2292470581C00287D33 /* ConsolesManager.swift */,
+				6850612A248EA23D00AC9D96 /* ConsoleViewController.swift */,
+				6850612E248EC21300AC9D96 /* AddEditConsoleViewController.swift */,
+				68506130248EC4B700AC9D96 /* ConsoleTableViewCell.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
 		};
-		680B70CC24C364EE005E295D /* Views */ = {
+		680B70F124C3AF73005E295D /* Game */ = {
 			isa = PBXGroup;
 			children = (
-				680B70CD24C36ED4005E295D /* Authentication.storyboard */,
-				680B70D524C38998005E295D /* SignInLandscape.storyboard */,
+				680B70F324C3AF8E005E295D /* Controllers */,
+				680B70F224C3AF82005E295D /* Views */,
 			);
-			name = Views;
+			path = Game;
+			sourceTree = "<group>";
+		};
+		680B70F224C3AF82005E295D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				680B70F424C3AFEE005E295D /* Game.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		680B70F324C3AF8E005E295D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				680B70F624C3BEA2005E295D /* GameCollectionViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		68506128248EA0B900AC9D96 /* DataBase */ = {
@@ -145,15 +212,6 @@
 				ED8AA20D246F559500287D33 /* MyGames.xcdatamodeld */,
 			);
 			path = DataBase;
-			sourceTree = "<group>";
-		};
-		68506129248EA0FF00AC9D96 /* StoryBoard */ = {
-			isa = PBXGroup;
-			children = (
-				ED8AA212246F559700287D33 /* LaunchScreen.storyboard */,
-				ED8AA20A246F559500287D33 /* Main.storyboard */,
-			);
-			path = StoryBoard;
 			sourceTree = "<group>";
 		};
 		ED8AA1F8246F559500287D33 = {
@@ -175,23 +233,11 @@
 		ED8AA203246F559500287D33 /* MyGames */ = {
 			isa = PBXGroup;
 			children = (
-				680B70BE24C34726005E295D /* Features */,
+				680B70E524C39A9B005E295D /* Features */,
 				ED8AA204246F559500287D33 /* AppDelegate.swift */,
 				ED8AA206246F559500287D33 /* SceneDelegate.swift */,
-				68506129248EA0FF00AC9D96 /* StoryBoard */,
 				ED8AA210246F559700287D33 /* Assets.xcassets */,
 				ED8AA215246F559800287D33 /* Info.plist */,
-				68506128248EA0B900AC9D96 /* DataBase */,
-				ED8AA21B2470176B00287D33 /* GamesTableViewController.swift */,
-				ED8AA21F247018BF00287D33 /* GameViewController.swift */,
-				ED8AA2212470192000287D33 /* AddEditViewController.swift */,
-				ED8AA22324701B9C00287D33 /* GameTableViewCell.swift */,
-				ED8AA22524701E9600287D33 /* ConsolesTableViewController.swift */,
-				ED8AA22724702C6400287D33 /* ViewController+CoreData.swift */,
-				ED8AA2292470581C00287D33 /* ConsolesManager.swift */,
-				6850612A248EA23D00AC9D96 /* ConsoleViewController.swift */,
-				6850612E248EC21300AC9D96 /* AddEditConsoleViewController.swift */,
-				68506130248EC4B700AC9D96 /* ConsoleTableViewCell.swift */,
 			);
 			path = MyGames;
 			sourceTree = "<group>";
@@ -254,6 +300,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				680B70F524C3AFEE005E295D /* Game.storyboard in Resources */,
 				ED8AA214246F559700287D33 /* LaunchScreen.storyboard in Resources */,
 				ED8AA211246F559700287D33 /* Assets.xcassets in Resources */,
 				ED8AA20C246F559500287D33 /* Main.storyboard in Resources */,
@@ -288,6 +335,7 @@
 				ED8AA20F246F559500287D33 /* MyGames.xcdatamodeld in Sources */,
 				ED8AA22824702C6400287D33 /* ViewController+CoreData.swift in Sources */,
 				ED8AA22424701B9C00287D33 /* GameTableViewCell.swift in Sources */,
+				680B70F724C3BEA2005E295D /* GameCollectionViewController.swift in Sources */,
 				680B70C324C34847005E295D /* OnboardingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

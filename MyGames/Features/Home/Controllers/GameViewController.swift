@@ -22,7 +22,25 @@ class GameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        lockOrientation(.portrait, andRotateTo: .portrait)
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        lockOrientation(.allButUpsideDown)
+    }
+    
+    func lockOrientation(_ orientation: UIInterfaceOrientationMask) {
+        if let delegate = UIApplication.shared.delegate as? AppDelegate {
+            delegate.orientationLock = orientation
+        }
+    }
+
+    func lockOrientation(_ orientation: UIInterfaceOrientationMask, andRotateTo rotateOrientation:UIInterfaceOrientation) {
+
+        self.lockOrientation(orientation)
+
+        UIDevice.current.setValue(rotateOrientation.rawValue, forKey: "orientation")
     }
     
     override func viewWillAppear(_ animated: Bool) {

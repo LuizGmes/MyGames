@@ -41,7 +41,6 @@ class OnboardingViewController: UIViewController {
             }
         }
 
-        /// OPTIONAL Added method to adjust lock and rotate to the desired orientation
         func lockOrientation(_ orientation: UIInterfaceOrientationMask, andRotateTo rotateOrientation:UIInterfaceOrientation) {
 
             self.lockOrientation(orientation)

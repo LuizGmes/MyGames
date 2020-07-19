@@ -22,6 +22,7 @@ class GamesTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        lockOrientation(.portrait, andRotateTo: .portrait)
 
         // mensagem default
         label.text = "Você não tem jogos cadastrados"
@@ -41,6 +42,24 @@ class GamesTableViewController: UITableViewController {
         searchController.searchResultsUpdater = self
         
         loadGames()
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        lockOrientation(.allButUpsideDown)
+    }
+    
+    func lockOrientation(_ orientation: UIInterfaceOrientationMask) {
+        if let delegate = UIApplication.shared.delegate as? AppDelegate {
+            delegate.orientationLock = orientation
+        }
+    }
+
+    func lockOrientation(_ orientation: UIInterfaceOrientationMask, andRotateTo rotateOrientation:UIInterfaceOrientation) {
+
+        self.lockOrientation(orientation)
+
+        UIDevice.current.setValue(rotateOrientation.rawValue, forKey: "orientation")
     }
     
     override func viewWillAppear(_ animated: Bool) {
